@@ -113,6 +113,17 @@ export default function VerifyCertificatePage() {
                           </div>
                         </div>
                       </div>
+                      
+                      {certificateData.certificateImage && (
+                        <div className="pt-6 border-t border-gray-100 mt-6">
+                          <div className="text-xs font-semibold text-gray-400 tracking-widest uppercase mb-4">Certificate Document</div>
+                          <img 
+                            src={certificateData.certificateImage} 
+                            alt={`Certificate for ${certificateData.studentName}`} 
+                            className="w-full h-auto rounded-xl border border-gray-200 shadow-sm object-contain max-h-[600px] bg-gray-50" 
+                          />
+                        </div>
+                      )}
                     </div>
                   </>
                 ) : (
